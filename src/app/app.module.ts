@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { Sidenav } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     Sidenav,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,10 @@ import { HomeComponent } from './home/home.component';
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
       }
     ])
   ],
