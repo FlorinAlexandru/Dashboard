@@ -7,3 +7,7 @@
 .toolbar{
   background-color: #E892E0;
 }
+
+button span{
+  font-size: 16px;
+}
