@@ -31,17 +31,28 @@
   margin: 0;
 }
 
-.menu-item{
-  padding: 10px;
-  align-items: center;
-  display: flex;
-  vertical-align: middle;
-}
-
 .material-design{
   vertical-align: middle;
 }
 
+.menu-item{
+  padding: 10px 0 10px 10px;
+  align-items: center;
+  display: flex;
+  vertical-align: middle;
+  transition: 0.3s all;
+}
+
 .menu-item md-icon{
   margin-right: 25px;
+}
+
+.menu-item a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.menu-item:hover{
+  background-color: #da9823;
 }
