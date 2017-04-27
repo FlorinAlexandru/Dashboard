@@ -10,6 +10,7 @@ import { UserService } from '../user-form/user-form.service';
 export class UserFormComponent implements OnInit{
 
     pageTitle:string = 'User table';        
+    errorMsg: string = '';
     userList:any[];
 
     constructor(private _userService: UserService) {
@@ -17,7 +18,11 @@ export class UserFormComponent implements OnInit{
     }
 
     ngOnInit(): void{
-        this.userList = this._userService.getUsers();
+        this._userService.getUsers()
+            .subscribe(
+                users => this.userList = users,
+                error => this.errorMsg = <any>error
+            );
     }
     
 }
