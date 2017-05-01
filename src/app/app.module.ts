@@ -12,6 +12,7 @@ import { Sidenav } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { UserGridComponent } from './user-grid/user-grid.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserFormComponent } from './user-form/user-form.component';
     Sidenav,
     HomeComponent,
     ContactComponent,
-    UserFormComponent
+    UserFormComponent,
+    UserGridComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,14 @@ import { UserFormComponent } from './user-form/user-form.component';
       {
         path: 'contact',
         component: ContactComponent
+      },
+      {
+        path: 'grid',
+        component: UserGridComponent
+      },
+      {
+        path: 'form',
+        component: UserFormComponent
       }
     ])
   ],
