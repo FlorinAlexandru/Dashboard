@@ -1,19 +1,23 @@
-<div>
-    <h2>{{pageTitle}}</h2>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>        
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of userList">
-                <td>{{user.name}}</td>
-                <td>{{user.email}}</td>
-                <td>{{user.age}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<form #heroForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input [(ngModel)]="nameField" type="text" class="form-control" id="name" placeholder="name" name="name" required  #name="ngModel">
+    <small [hidden]="name.valid || name.pristine" class="text-danger"> Name is required </small>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input [(ngModel)]='emailField' type="email" class="form-control" id="email" placeholder="email" name="email" required #email="ngModel" 
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #spy>
+    <small [hidden]="email.valid || email.pristine" class="text-danger"> Email is required and format should be john@doe.com</small>
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input [(ngModel)]='ageField' type="number" class="form-control" id="age" placeholder="age" name="age" min="0" max="150" required #age="ngModel" #aspy>
+    <small [hidden]="age.valid || age.pristine" class="text-danger"> Age is required </small>
+  </div>
+
+  <button type="submit" class="btn btn-default" [disabled]="!(name.valid && email.valid && age.valid)">Submit</button>
+</form>
