@@ -1,0 +1,25 @@
+<div>
+    <h2>{{pageTitle}}</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>        
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList; let i=index" (click)="rowSelected(i)" (dblclick)="rowDblClick()" [class.active]="i == selectedRow">
+                <td>{{user.name}}</td> 
+                <td>{{user.email}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <modal-dialog [showModal] = 'show'>
+            <div class="list-goup">
+            </div>
+        </modal-dialog>
+    </div>
+</div>
