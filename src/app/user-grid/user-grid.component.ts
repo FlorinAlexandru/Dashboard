@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { UserService } from '../user-grid/user-grid.service';
+import { ModalDirective } from 'ngx-bootstrap/modal';
+
 
 @Component({
     selector: 'user-grid',
@@ -9,6 +11,7 @@ import { UserService } from '../user-grid/user-grid.service';
 })
 
 export class UserGridComponent implements OnInit{
+    @ViewChild('childModal') public childModal:ModalDirective;
 
     pageTitle:string = 'User table';        
     errorMsg: string = '';
@@ -36,6 +39,11 @@ export class UserGridComponent implements OnInit{
     rowDblClick(){
         console.log('row dbl clicked');
         this.show = true;
+        this.childModal.show();
+    }
+    
+    public hideChildModal():void {
+        this.childModal.hide();
     }
     
 }
