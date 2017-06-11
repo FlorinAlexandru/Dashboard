@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserGridComponent } from './user-grid/user-grid.component';
+import { ModalDialog } from './modal/modal.component'
+
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { UserGridComponent } from './user-grid/user-grid.component';
     HomeComponent,
     ContactComponent,
     UserFormComponent,
-    UserGridComponent
+    UserGridComponent,
+    ModalDialog
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { UserGridComponent } from './user-grid/user-grid.component';
     MdButtonModule,
     MdSidenavModule,
     MdIconModule,
+    ModalModule.forRoot(),
     RouterModule.forRoot([
       {
         path: 'home',
