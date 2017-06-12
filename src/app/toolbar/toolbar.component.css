@@ -1,13 +1,16 @@
-.example-fill-remaining-space {
-  /*This fills the remaining space, by using flexbox. 
-  Every toolbar row uses a flexbox row layout.*/
-  flex: 1 1 auto;
-}
-
 .toolbar{
+  height: 64px;
   background-color: #E892E0;
+  flex: 1 1 auto;
+  display: flex;  
+  align-items: center
 }
 
-button span{
-  font-size: 16px;
+.toolbar button{
+  background-color: #E892E0;
+  border: none;
+}
+
+.toolbar .title{
+  font-size: 20px;
 }
