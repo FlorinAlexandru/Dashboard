@@ -9,8 +9,35 @@
 .toolbar button{
   background-color: #E892E0;
   border: none;
+  font-size: 20px;
 }
 
 .toolbar .title{
   font-size: 20px;
+}
+
+.toolbar-right{
+  float: right !important;
+}
+
+.toolbar-left{
+  float: left !important;
+  flex: 1;
+  align-items: center;
+}
+
+.toolbar-left>button{
+  float: left;
+}
+
+.toolbar-left>div{
+  padding: 6px 12px;
+}
+
+.toolbar-right>button{
+  float: left;  
+}
+
+.toolbar-right span{
+  font-size: 14px;
 }
