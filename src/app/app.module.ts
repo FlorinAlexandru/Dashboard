@@ -53,6 +53,16 @@ import { ModalModule } from 'ngx-bootstrap';
       {
         path: 'form',
         component: UserFormComponent
+      },
+      {
+        path: '', 
+        redirectTo: '/home', 
+        pathMatch: 'full'
+      },
+      {
+        path: '**',
+        redirectTo: '/home', 
+        pathMatch: 'full'
       }
     ])
   ],
