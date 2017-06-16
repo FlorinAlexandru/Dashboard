@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router,NavigationStart } from '@angular/router';
-
+import { Router, NavigationStart } from '@angular/router';
+import { CollapseService } from '../common/collapse-service';
 
 @Component({
     selector: 'toolbar',
@@ -9,12 +9,13 @@ import { Router,NavigationStart } from '@angular/router';
 })
 export class ToolbarComponent implements OnInit {
     menuTitle: any;
-
-    constructor(private router: Router){
-
+    private initCollapseState: boolean = false;
+    
+    constructor(private router: Router, private collapsibleService: CollapseService){
     }
 
     ngOnInit(){
+
         this.menuTitle = this.router.events.subscribe(params => {
             if(params instanceof NavigationStart) {
                 let temp = params.url;
@@ -24,7 +25,12 @@ export class ToolbarComponent implements OnInit {
             }
             
         });
+    }
 
+    public hamburgerMenuClicked(){
+        console.log('collapse');
+        this.initCollapseState = !this.initCollapseState;
+        this.collapsibleService.changeCollapsible(this.initCollapseState);
     }
 
 }
