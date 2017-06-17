@@ -1,8 +1,8 @@
 <div class="wrapper">
-  <div class="sidenav-container col-md-2" [ngClass]="{ 'collapse':flag }">
+  <div class="sidenav-container col-md-2" [ngClass]="{ 'sidenav-container-collapse':flag }">
     <sidenav></sidenav>
   </div>
-  <div class="content col-md-10">
+  <div class="content" [ngClass]="{ 'col-md-10':!flag, 'col-md-12':flag }">
     <toolbar></toolbar>
     <div>
       <router-outlet></router-outlet>
