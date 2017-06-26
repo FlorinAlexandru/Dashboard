@@ -17,8 +17,9 @@
   transition: 0.3s all;
 }
 
-.menu-item md-icon{
-  margin-right: 25px;
+.menu-item i{
+  margin-right: 55px;
+  padding-left: 40px; 
 }
 
 .menu-item a {
