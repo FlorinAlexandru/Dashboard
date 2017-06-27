@@ -1,11 +1,13 @@
 <div class="wrapper">
-  <div class="sidenav-container col-md-2" [ngClass]="{ 'sidenav-container-collapse':flag }">
+  <div class="sidenav-container" [ngClass]="{ 'col-md-1':flag, 'col-sm-1':flag, 'col-md-2':!flag, 'col-sm-2':!flag  }">
     <sidenav></sidenav>
   </div>
-  <div class="content" [ngClass]="{ 'col-md-10':!flag, 'col-md-12':flag }">
+  <div class="content" [ngClass]="{ 'col-md-10':!flag, 'col-md-11':flag, 'col-sm-10':!flag, 'col-sm-11':flag }">
     <toolbar></toolbar>
-    <div>
-      <router-outlet></router-outlet>
+    <div class="content-inner">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
 </div>

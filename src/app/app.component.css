@@ -29,3 +29,39 @@
 .wrapper .col-md-2{
     transition: all 0.4s ease 0s;
 }
+
+.wrapper .col-md-1{
+    transition: all 0.4s ease 0s;
+}
+
+.content-inner{
+    padding-top: 30px;
+    padding-left: 15px;
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 768px) {
+    .sidenav-container{
+        width: 0;
+    }
+
+    .content{
+        width: 100%;    
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 768px) and (orientation : landscape) {
+/* Styles */
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .sidenav-container{
+        width: 0;
+    }
+
+    .content{
+        width: 100%;    
+    }
+}
