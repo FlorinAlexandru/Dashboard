@@ -15,6 +15,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { UserGridComponent } from './user-grid/user-grid.component';
 import { ModalDialog } from './modal/modal.component'
 import { CollapseService } from './common/collapse-service';
+import { Card } from './card/card.component';
 
 import { ModalModule } from 'ngx-bootstrap';
 
@@ -27,7 +28,8 @@ import { ModalModule } from 'ngx-bootstrap';
     ContactComponent,
     UserFormComponent,
     UserGridComponent,
-    ModalDialog
+    ModalDialog,
+    Card
   ],
   imports: [
     BrowserModule,
