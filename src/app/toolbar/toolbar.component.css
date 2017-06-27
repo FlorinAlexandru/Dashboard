@@ -1,13 +1,15 @@
 .toolbar{
   height: 64px;
-  background-color: #E892E0;
+  background-color: #f4f3ef;
   flex: 1 1 auto;
   display: flex;  
-  align-items: center
+  align-items: center;
+
+  border-bottom: 1px solid #ddd;
 }
 
 .toolbar button{
-  background-color: #E892E0;
+  background-color: #f4f3ef;
   border: none;
     font-size: 20px;
 }
