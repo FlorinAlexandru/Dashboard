@@ -1,23 +1,23 @@
 <div>
     <div class="logo"></div>
     
-    <div class="menu-item">
+    <a class="menu-item" [routerLink]="['/home']">
         <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-        <a [routerLink]="['/home']">Home</a>
-    </div>
+        <span>Home</span>
+    </a>
 
-    <div class="menu-item">
+    <a class="menu-item" [routerLink]="['/contact']">
         <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-        <a [routerLink]="['/contact']">Contact</a>
-    </div>
+        <span>Contact</span>
+    </a>
 
-    <div class="menu-item">
+    <a class="menu-item" [routerLink]="['/grid']">
         <i class="fa fa-th fa-2x" aria-hidden="true"></i>
-        <a [routerLink]="['/grid']">Grid</a>
-    </div>
+        <span>Grid</span>
+    </a>
 
-    <div class="menu-item">
+    <a class="menu-item" [routerLink]="['/form']">
         <i class="fa fa-circle fa-2x" aria-hidden="true"></i>
-        <a [routerLink]="['/form']">Form</a>
-    </div>
+        <span>Form</span>
+    </a>
 </div>
