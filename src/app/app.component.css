@@ -40,6 +40,38 @@
 }
 
 
+.collapse-sidenav{
+    transition: all 0.4s ease 0s;
+}
+
+ .collapse-content{
+    transition: all 0.4s ease 0s;
+} 
+
+
+@media only screen and (min-device-width: 1199px){
+    .sidenav-container{
+        width: 15%;
+    }
+
+    .content{
+        width: 85%;
+    }
+
+    .collapse-sidenav{
+        width: 8%;
+    }
+
+    .collapse-sidenav span{
+        display: none;
+    }
+
+    .collapse-content{
+        width: 92%;
+    }
+}
+
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 768px) {
     .sidenav-container{
         width: 0;

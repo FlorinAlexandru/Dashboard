@@ -1,8 +1,9 @@
 <div class="wrapper">
-  <div class="sidenav-container" [ngClass]="{ 'col-md-1':flag, 'col-sm-1':flag, 'col-md-2':!flag, 'col-sm-2':!flag  }">
+  <!--<div class="sidenav-container" [ngClass]="{ 'col-md-1':flag, 'col-sm-1':flag, 'col-md-2':!flag, 'col-sm-2':!flag  }">-->
+  <div class="sidenav-container" [ngClass]="{ 'collapse-sidenav':flag }">
     <sidenav></sidenav>
   </div>
-  <div class="content" [ngClass]="{ 'col-md-10':!flag, 'col-md-11':flag, 'col-sm-10':!flag, 'col-sm-11':flag }">
+  <div class="content" [ngClass]="{ 'collapse-content':flag }">
     <toolbar></toolbar>
     <div class="content-inner">
       <div class="container-fluid">
