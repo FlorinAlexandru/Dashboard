@@ -56,17 +56,21 @@
     transition: all 0.4s ease 0s;
 }
 
+.collapse-sidenav {
+    text-align: center;
+}
+
 @media only screen and (min-device-width: 1199px){
     .extend-sidenav{
         width: 15%;
     }
 
     .collapse-sidenav{
-        width: 8%;
+        width: 4%;
     }
 
     .extend-content{
-        width: 92%;
+        width: 96%;
     }
 
     .collapse-content{

@@ -1,36 +1,75 @@
-.logo{
+ .logo{
   height: 64px;
   background-color: #65fadc;
   padding: 0;
   margin: 0;
 }
 
-.menu-item{
+.navbar-inner * {
+  transition: width .5s ease;
+  -webkit-transition: width .5s ease;
+  -moz-transition: width .5s ease;
+  -o-transition: width .5s ease;  
+}
+
+.navbar-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-inner li a {
   padding: 10px 0 10px 10px;
   align-items: center;
   display: flex;
   vertical-align: middle;
-  transition: 0.3s all;
-}
-
-.menu-item i{
-  /*margin-right: 55px;
-  padding-left: 40px;*/
   color: #000;
+  line-height: 48px;
+  /* position: relative; */
 }
 
-.menu-item span {
-  height: 100%;
-  width: 100%;
+.navbar-inner li i {
+  z-index: 102;
+}
+
+
+.navbar-inner li span {
+  height: 48px;
+  /* width: 100%;  */
+  /* left: -100px; */
+  padding-left: 65px; 
+  color: #000; 
   display: block;
-  color: #000;
+  position: absolute;
+}   
+ 
+ li:hover{
+  background-color: #da9823; 
 }
 
-.menu-item:hover{
+.navbar-inner li a:hover {
+  z-index: 99;
   background-color: #da9823;
+  z-index: 101;
 }
+
+.navbar-inner li a:hover span{
+  align-items: center;
+  visibility: visible;
+  z-index: 99;
+  width: 150px;
+  display: inline-block;
+  /* right: 340px; */
+  background-color: #da9823; 
+} 
+
 @media only screen and (min-device-width: 1199px){
     .collapse-sidenav span{
-        display: none;
+        visibility: hidden;
     }
-}
+
+    .collapse-sidenav li a:hover .fa {
+      transform: rotate(720deg);
+    }
+} 
+
