@@ -26,14 +26,6 @@
     transition: all 0.4s ease 0s;
 }
 
-.wrapper .col-md-2{
-    transition: all 0.4s ease 0s;
-}
-
-.wrapper .col-md-1{
-    transition: all 0.4s ease 0s;
-}
-
 .content-inner{
     padding-top: 30px;
     padding-left: 15px;
