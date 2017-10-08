@@ -63,6 +63,28 @@
   background-color: #da9823; 
 } 
 
+
+@media (min-width: 768px)  and (max-width: 991px){
+  .collapse-sidenav span{
+      visibility: hidden;
+  }
+
+  .collapse-sidenav li i{
+    visibility: hidden;
+  }
+} 
+
+
+@media (min-width: 992px){
+  .collapse-sidenav span{
+      visibility: hidden;
+  }
+
+  .collapse-sidenav li a:hover .fa {
+    transform: rotate(720deg);
+  }
+} 
+
 @media only screen and (min-device-width: 1199px){
     .collapse-sidenav span{
         visibility: hidden;
@@ -71,5 +93,4 @@
     .collapse-sidenav li a:hover .fa {
       transform: rotate(720deg);
     }
-} 
-
+}
