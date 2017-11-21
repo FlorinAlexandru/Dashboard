@@ -13,7 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserGridComponent } from './user-grid/user-grid.component';
-import { ModalDialog } from './modal/modal.component'
+import { ModalDialog } from './modal/modal.component';
+import { ModalService } from './modal/modal.service';
 import { CollapseService } from './common/collapse-service';
 import { Card } from './card/card.component';
 
@@ -69,7 +70,7 @@ import { ModalModule } from 'ngx-bootstrap';
       }
     ])
   ],
-  providers: [CollapseService],
+  providers: [CollapseService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
